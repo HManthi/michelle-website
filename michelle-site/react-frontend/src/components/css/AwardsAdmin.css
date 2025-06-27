@@ -1,0 +1,78 @@
+.awards-admin {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fcff;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: #1b3d57;
+}
+
+.add-btn {
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn svg {
+  margin-right: 0.5rem;
+}
+
+.add-btn:hover {
+  background-color: #0097a7;
+}
+
+.award-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.award-table th, .award-table td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.award-table th {
+  background-color: #eef6fa;
+  color: #37474f;
+  font-weight: 600;
+}
+
+.award-table td {
+  color: #455a64;
+}
+
+.award-table button {
+  background: none;
+  border: none;
+  margin-right: 0.6rem;
+  cursor: pointer;
+  color: #00796b;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.award-table button:hover {
+  color: #004d40;
+}

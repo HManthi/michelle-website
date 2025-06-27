@@ -1,0 +1,76 @@
+/* Login.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1e1e1e, #2c2c2c); /* subtle dark gradient */
+  font-family: 'Playfair Display', serif;
+  padding: 1rem;
+}
+
+.login-box {
+  background: #f9f9f9; /* light neutral background */
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); /* golden glow */
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.login-box button {
+  width: 100%;
+  background-color: #d4af37; /* gold */
+  color: #1e1e1e;
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #c19c29;
+}
+
+@media (max-width: 500px) {
+  .login-box {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #1e1e1e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-home:hover {
+  color: #d4af37;
+}
+
+

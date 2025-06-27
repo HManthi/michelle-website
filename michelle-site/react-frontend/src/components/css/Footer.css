@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Raleway:wght@400;700&display=swap');
+
+.footer-blend {
+  background: linear-gradient(to right, #111, #000);
+  color: #ddd;
+  font-family: 'Raleway', sans-serif;
+  padding: 3rem 2rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-brand h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #f0e6d2;
+  letter-spacing: 2px;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  color: #aaa;
+  max-width: 300px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff3b0;
+}
+
+.footer-social .icons a {
+  color: #aaa;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .icons a:hover {
+  color: #d4af37;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #888;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+}

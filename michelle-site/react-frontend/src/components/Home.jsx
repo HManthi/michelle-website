@@ -9,7 +9,7 @@ function Home() {
     <h1>Michelle Dilhara</h1>
     <p>Empowering lives through art, storytelling, and global impact. Discover her world of cinema and service.</p>
     <Link to="/portfolio">
-          <button>View Portfolio</button>
+          {/* <button>View Portfolio</button> */}
     </Link>
   </div>
 </div>

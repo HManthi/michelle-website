@@ -62,3 +62,19 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.admin-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.admin-sidebar ul li a:hover,
+.admin-sidebar ul li.active a {
+  background-color: #444;
+  border-radius: 4px;
+}

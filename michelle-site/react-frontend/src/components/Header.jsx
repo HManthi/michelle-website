@@ -1,30 +1,48 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // 👈 Import Link from react-router-dom
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './css/Header.css';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(prev => !prev);
+  const closeMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+    closeMenu();
+  }, [location]);
 
   return (
-    <header className="site-header">
-      <div className="logo">Michelle</div>
+    <>
+      <header className="site-header">
+        <div className="header-left">
+          <div className="menu-toggle" onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="logo">Michelle</div>
+        </div>
+      </header>
 
-      <nav className={`nav ${isOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={toggleMenu}>Home</Link>
-        <Link to="/about" onClick={toggleMenu}>About</Link>        
-        <Link to="/social-work" onClick={toggleMenu}>Social Work</Link>
-        <Link to="/dramas-movies" onClick={toggleMenu}>Dramas & Movies</Link>   
-        <Link to="/gallery" onClick={toggleMenu}>Gallery</Link>     
-        <Link to="/contact" onClick={toggleMenu}>Contact</Link>
-        <Link to="/login">Login</Link>
-      </nav>
+      {/* Overlay */}
+      {isOpen && <div className="overlay" onClick={closeMenu}></div>}
 
-      <div className="menu-toggle" onClick={toggleMenu}>
-        ☰
-      </div>
-    </header>
+      <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <nav className="sidebar-nav">
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
+          <Link to="/awards-page" onClick={closeMenu}>Awards</Link>
+          <Link to="/social-work" onClick={closeMenu}>Social Work</Link>
+          <Link to="/education-outreach" onClick={closeMenu}>Education Outreach</Link>
+          <Link to="/dramas-movies" onClick={closeMenu}>Dramas & Movies</Link>
+          <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+          <Link to="/contact" onClick={closeMenu}>Contact</Link>
+          <Link to="/login" onClick={closeMenu}>Login</Link>
+        </nav>
+      </aside>
+    </>
   );
 }
 

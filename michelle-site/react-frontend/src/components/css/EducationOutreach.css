@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+.edu-hero {
+  background-image: url('/assets/edu-hero_2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 10vh;
+  position: relative;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+.edu-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.edu-section {
+  background: radial-gradient(circle at top, #111, #000);
+  color: #f0f0f0;
+  padding: 4rem 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.edu-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.edu-container h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.edu-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.edu-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.edu-gallery img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.edu-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.edu-quote {
+  text-align: center;
+  margin-top: 3rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* -------------------- NEW GALLERY LIST STYLES -------------------- */
+.edu-gallery-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.edu-gallery-item {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.edu-gallery-item img,
+.edu-gallery-item video,
+.edu-gallery-item iframe {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.edu-info {
+  flex: 1;
+}
+
+.edu-info h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.edu-info p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edu-container h2 {
+    font-size: 2rem;
+  }
+
+  .edu-container p,
+  .edu-quote {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .edu-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu-gallery-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-info {
+    margin-top: 1rem;
+  }
+}
+
+/* ---------------------- POPUP MODAL STYLES ---------------------- */
+.edu-modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.edu-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edu-modal-content img,
+.edu-modal-content video,
+.edu-modal-content iframe {
+  width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+}
+
+.edu-modal h4 {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  margin-top: 1rem;
+}
+
+.edu-modal p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.edu-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: #d4af37;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------------------- ENFORCED CONSISTENT MEDIA SIZE ---------------------- */
+.edu-gallery-item img,
+.edu-gallery-item video,
+.edu-gallery-item iframe {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.edu-gallery-item img:hover,
+.edu-gallery-item video:hover,
+.edu-gallery-item iframe:hover {
+  transform: scale(1.05);
+}

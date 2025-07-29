@@ -1,0 +1,61 @@
+.edu-admin {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.edu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f9fbff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.edu-form input,
+.edu-form textarea,
+.edu-form select {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.field-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.edu-entries {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.edu-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.edu-card img,
+.edu-card video,
+.edu-card iframe {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
